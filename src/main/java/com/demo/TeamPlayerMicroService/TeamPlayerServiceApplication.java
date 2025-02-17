@@ -1,4 +1,4 @@
-package com.cricket.team_player_service;
+package com.demo.TeamPlayerMicroService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableFeignClients
 @EnableDiscoveryClient
-
 public class TeamPlayerServiceApplication {
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(TeamPlayerServiceApplication.class, args);
 	}

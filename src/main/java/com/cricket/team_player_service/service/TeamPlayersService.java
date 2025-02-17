@@ -87,10 +87,6 @@ public class TeamPlayersService {
 	    }
 	    return new ArrayList<>(matches); // Convert Set back to List
 	}
-
-	public TeamPlayer saveTeamPlayer(TeamPlayer teamPlayer) {
-        return teamPlayersRepository.save(teamPlayer);
-    }
 	public List<TeamPlayer> getAllTeamPlayers() {
         return teamPlayersRepository.findAll();
     }
@@ -101,5 +97,18 @@ public class TeamPlayersService {
     public void deleteTeamPlayerById(int id) {
         teamPlayersRepository.deleteById(id);
     }
+
+	public List<TeamPlayer> getAllPlayersByTeamId(int teamId) {
+		List<TeamPlayer> teamPlayers=(List<TeamPlayer>) teamPlayersRepository.findByTeamId(teamId).orElse(null);
+        return teamPlayers;
+	}
+	public TeamPlayer saveTeamPlayer(TeamPlayer teamPlayer) {
+        return teamPlayersRepository.save(teamPlayer);
+    }
+
+
+    // Delete a TeamPlayer by ID
+    
+
 }
 

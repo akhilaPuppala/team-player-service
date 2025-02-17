@@ -15,4 +15,6 @@ public interface TeamPlayersRepository extends JpaRepository<TeamPlayer, Integer
 	
 
 	List<TeamPlayer> findByPlayerId(int playerId);
+
+	Optional<TeamPlayer> findByTeamId(int teamId);
 }

@@ -13,7 +13,7 @@ public interface TeamsFeignClient {
 	@GetMapping("/{teamId}")
     TeamDTO getTeam1ById(@PathVariable int teamId);
 
-    @GetMapping("/booking/{bookingId}")
+    @GetMapping("/booking/1/{bookingId}")
     List<TeamDTO> getTeamsByBookingId(@PathVariable int bookingId);
 
 }
